@@ -27,9 +27,15 @@ class BankTest < MiniTest::Test
 
     assert_equal expected, actual
   end
-  
+
+  def test_a_bank_can_make_a_deposit
+    chase = Bank.new("JP Morgan Chase")
+    person1 = Person.new("Minerva", 1000)
+
+    expected = "750 galleons have been deposited into Minerva's Chase account. Balance: 750 Cash: 250"
+    actual = chase.deposit(person1, 750)
+
+    assert_equal expected, actual
+  end
 end
 __END__
-chase.deposit(person1, 750)
-
-750 galleons have been deposited into Minerva's Chase account. Balance: 750 Cash: 250
