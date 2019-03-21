@@ -1,4 +1,6 @@
 class Person
+  attr_reader :name,
+              :money
 
   def initialize(name, money)
     @name = name
