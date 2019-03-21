@@ -21,5 +21,3 @@ class PersonTest < MiniTest::Test
   end
 
 end
-
-__END__
